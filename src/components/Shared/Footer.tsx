@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { footerData } from "../../data/footer";
 import Section from "./Section";
 
@@ -18,7 +19,7 @@ const Footer = () => {
               <ul className="lg:text-base text-sm">
                 {d.links.map((l, i) => (
                   <li key={i}>
-                    <a href={l.link}>{l.name}</a>
+                    <Link to={l.link}>{l.name}</Link>
                   </li>
                 ))}
               </ul>

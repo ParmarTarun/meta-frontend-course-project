@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { navData } from "../../data/nav";
 
 const Nav = () => {
@@ -6,9 +7,9 @@ const Nav = () => {
       <ul className="flex lg:text-xl text-sm lg:gap-4 gap-2 justify-center items-center flex-wrap">
         {navData.map((l, i) => (
           <li key={i}>
-            <a href={l.link} role="link">
+            <Link to={l.link} role="link">
               {l.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
