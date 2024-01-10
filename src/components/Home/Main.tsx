@@ -1,13 +1,13 @@
-import React from "react";
-import Section from "../Shared/Section";
 import Hero from "./Hero";
+import Specials from "./Specials";
 
 const Main = () => {
   return (
     <main>
-      <Section dark={true} classes="lg:mb-48">
+      <>
         <Hero />
-      </Section>
+        <Specials />
+      </>
     </main>
   );
 };

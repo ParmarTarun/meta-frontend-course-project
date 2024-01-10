@@ -27,12 +27,15 @@ h5 {
   @apply lg:text-lg text-sm;
 }
 
+a:active {
+  @apply text-primary;
+}
 img {
-  @apply rounded-lg w-4/5;
+  @apply rounded-lg;
 }
 
 .btn-primary {
-  @apply px-2 py-1 bg-primary text-dark rounded-md;
+  @apply px-2 py-1 bg-primary text-dark rounded-md lg:text-2xl text-lg shadow-md hover:bg-light hover:text-secondary border hover:border-primary;
 }
 
 .hero-content > * {
