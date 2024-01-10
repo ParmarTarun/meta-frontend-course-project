@@ -7,7 +7,7 @@ const Specials = () => {
       <>
         <div className="flex justify-between items-center mb-10">
           <h1>SPECIALS</h1>
-          <button className="btn-primary ">Order Online</button>
+          <button className="btn-primary">Order Online</button>
         </div>
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-14">
           {specialsData.map((s, i) => (

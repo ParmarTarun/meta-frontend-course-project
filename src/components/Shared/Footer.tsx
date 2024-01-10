@@ -16,8 +16,8 @@ const Footer = () => {
             <>
               <h4 className="lg:text-xl font-semibold">{d.heading}</h4>
               <ul className="lg:text-base text-sm">
-                {d.links.map((l) => (
-                  <li>
+                {d.links.map((l, i) => (
+                  <li key={i}>
                     <a href={l.link}>{l.name}</a>
                   </li>
                 ))}
