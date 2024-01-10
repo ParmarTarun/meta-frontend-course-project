@@ -1,12 +1,12 @@
 const Footer = () => {
   return (
-    <footer className="grid grid-cols-12">
-      <figure className="col-start-3 col-span-2">
+    <footer className="grid lg:grid-cols-12 grid-cols-2 grid-rows-2 px-2">
+      <figure className="lg:col-start-3 lg:col-span-2 col-span-1">
         <img src="/images/footer.jpg" alt="footer_image" className="w-4/5" />
       </figure>
-      <div className="flex flex-col text-left col-span-2">
-        <h4 className="text-lg">Document Navigation</h4>
-        <ul>
+      <div className="flex flex-col text-left lg:col-span-2 col-span-1">
+        <h4 className="lg:text-xl">Document Navigation</h4>
+        <ul className="lg:text-base text-sm">
           <li>
             <a href="/">Home</a>
           </li>
@@ -27,9 +27,9 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col text-left col-span-2">
-        <h4 className="text-2xl">Contact</h4>
-        <ul>
+      <div className="flex flex-col text-left lg:col-span-2 col-span-1">
+        <h4 className="lg:text-xl">Contact</h4>
+        <ul className="lg:text-base text-sm">
           <li>
             <a href="/">Address1</a>
           </li>
@@ -41,9 +41,9 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col text-left col-span-2">
-        <h4 className="text-2xl">Social Media Links</h4>
-        <ul>
+      <div className="flex flex-col text-left lg:col-span-2 col-span-1">
+        <h4 className="lg:text-xl">Social Media Links</h4>
+        <ul className="lg:text-base text-sm">
           <li>
             <a href="/">Address1</a>
           </li>

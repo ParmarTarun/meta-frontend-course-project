@@ -1,7 +1,7 @@
 const Nav = () => {
   return (
-    <nav className="col-span-6">
-      <ul className="flex text-2xl gap-4 justify-center">
+    <nav className="col-span-6 lg:mt-0 mt-2 ">
+      <ul className="flex lg:text-xl text-sm lg:gap-4 gap-1 justify-center items-center">
         <li>
           <a href="/">Home</a>
         </li>
