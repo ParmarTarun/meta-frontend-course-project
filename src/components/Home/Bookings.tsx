@@ -1,7 +1,17 @@
-import React from "react";
+import Section from "../Shared/Section";
+import BookingForm from "./BookingForm";
 
 const Bookings = () => {
-  return <div>Bookings</div>;
+  return (
+    <Section dark={true}>
+      <>
+        <div className="text-center mb-10">
+          <h1>Enter Details</h1>
+        </div>
+        <BookingForm />
+      </>
+    </Section>
+  );
 };
 
 export default Bookings;

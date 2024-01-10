@@ -41,3 +41,10 @@ img {
 .hero-content > * {
   @apply mb-4;
 }
+form label {
+  @apply lg:text-xl text-lg uppercase;
+}
+form input,
+form select {
+  @apply w-2/4 m-auto bg-light border border-primary rounded-lg p-2 text-secondary;
+}
