@@ -1,22 +1,14 @@
 import "./App.css";
+import Main from "./components/Home/Main";
+import Footer from "./components/Shared/Footer";
+import Header from "./components/Shared/Header";
 
 const App = () => {
   return (
     <>
-      <header>
-        <nav></nav>
-      </header>
-      <main>
-        <section>
-          <article>
-            <figure>
-              {/* <img /> */}
-              <figcaption></figcaption>
-            </figure>
-          </article>
-        </section>
-      </main>
-      <footer></footer>
+      <Header />
+      <Main />
+      <Footer />
     </>
   );
 };
