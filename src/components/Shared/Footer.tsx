@@ -4,17 +4,13 @@ import Section from "./Section";
 const Footer = () => {
   return (
     <Section dark={true}>
-      <footer className="grid lg:grid-cols-12 grid-cols-2 grid-rows-2">
-        <figure className="lg:col-start-3 lg:col-span-2 col-span-1 ">
-          <img
-            src="/images/footer.jpg"
-            alt="footer_image"
-            className="w-4/5 rounded-lg"
-          />
+      <footer className="grid lg:grid-cols-12 grid-cols-4 grid-rows-2 gap-4">
+        <figure className="lg:col-span-3 col-span-2 ">
+          <img src="/images/footer.jpg" alt="footer_image" className="w-4/5" />
         </figure>
         {footerData.map((d, i) => (
           <div
-            className="flex flex-col text-left lg:col-span-2 col-span-1"
+            className="flex flex-col text-left lg:col-span-3 col-span-2"
             key={i}
           >
             <>

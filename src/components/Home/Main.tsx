@@ -1,16 +1,13 @@
 import React from "react";
+import Section from "../Shared/Section";
+import Hero from "./Hero";
 
 const Main = () => {
   return (
     <main>
-      <section>
-        <article>
-          <figure>
-            {/* <img /> */}
-            <figcaption></figcaption>
-          </figure>
-        </article>
-      </section>
+      <Section dark={true} classes="lg:mb-48">
+        <Hero />
+      </Section>
     </main>
   );
 };

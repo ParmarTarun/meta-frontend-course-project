@@ -10,3 +10,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+h1 {
+  @apply lg:text-4xl text-2xl;
+}
+h2 {
+  @apply lg:text-3xl text-xl;
+}
+h3 {
+  @apply lg:text-2xl text-lg;
+}
+h4 {
+  @apply lg:text-xl text-base;
+}
+h5 {
+  @apply lg:text-lg text-sm;
+}
+
+img {
+  @apply rounded-lg w-4/5;
+}
+
+.btn-primary {
+  @apply px-2 py-1 bg-primary text-dark rounded-md;
+}
+
+.hero-content > * {
+  @apply mb-4;
+}
