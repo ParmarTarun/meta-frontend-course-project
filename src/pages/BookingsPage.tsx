@@ -1,26 +1,17 @@
 import { useReducer, useState } from "react";
 import { bookingFormValues, timesAction } from "../types";
-import { defautltBookingFormValues } from "../constants";
 import Section from "../components/Shared/Section";
 import BookingForm from "../components/Bookings/BookingForm";
-import { generateRandomTimes } from "../utils";
+import { defautltBookingFormValues, fetchAPI } from "../utils";
 
-export const initializeTimes = () => [
-  "17:00",
-  "18:00",
-  "19:00",
-  "20:00",
-  "21:00",
-  "22:00",
-];
+export const initializeTimes = () => fetchAPI(new Date().toLocaleDateString());
 
 export const updateTimes = (state: string[], action: timesAction) => {
   switch (action.type) {
     case "UPDATE_TIMES":
       // generating random times array of length based on month number
-      const month = parseInt(action.data.split("-")[1]) || 10;
-      const randomTimes = generateRandomTimes(month);
-      return [...randomTimes];
+      const times = fetchAPI(action.data);
+      return [...times];
     default:
       return state;
   }
@@ -28,7 +19,7 @@ export const updateTimes = (state: string[], action: timesAction) => {
 
 const BookingsPage = () => {
   const [formData, setFormData] = useState<bookingFormValues>(
-    defautltBookingFormValues
+    defautltBookingFormValues()
   );
 
   const [times, dispatch] = useReducer(updateTimes, initializeTimes());
