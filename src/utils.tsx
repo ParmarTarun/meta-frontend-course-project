@@ -21,7 +21,9 @@ export const fetchAPI = (date: string) => {
 };
 // made a custom fetchApi function since provided url throws 404
 export const submitAPI = (formData: bookingFormValues) => {
-  return true;
+  return new Promise((res, rej) => {
+    res(true);
+  });
 };
 
 export const defautltBookingFormValues = () => {

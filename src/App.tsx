@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Section from "./components/Shared/Section";
 import HomePage from "./pages/HomePage";
 import BookingsPage from "./pages/BookingsPage";
+import BookingConfirmationPage from "./pages/BookingConfirmationPage";
 
 const App = () => {
   return (
@@ -12,7 +13,11 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/booking" element={<BookingsPage />}></Route> 
+          <Route
+            path="/bookingConfirmation"
+            element={<BookingConfirmationPage />}
+          ></Route>
+           <Route path="/booking" element={<BookingsPage />}></Route> 
           <Route path="/" element={<HomePage />}></Route>
         </Routes>
         <Footer />
