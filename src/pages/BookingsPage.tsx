@@ -32,9 +32,9 @@ const BookingsPage = () => {
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    submitAPI(formData).then((_) =>
-      navigate("/bookingConfirmation", { state: formData })
-    );
+    submitAPI(formData).then((res) => {
+      if (res) navigate("/bookingConfirmation", { state: formData });
+    });
   };
 
   return (
