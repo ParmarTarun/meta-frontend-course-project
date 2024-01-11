@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { bookingFormValues } from "../../types";
+import React, { FC, useEffect } from "react";
+import { bookingFormValues, timesAction } from "../../types";
 
 interface BookingFormProps {
   availableTimes: string[];
@@ -8,6 +8,7 @@ interface BookingFormProps {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  dispatch: React.Dispatch<timesAction>;
 }
 
 const BookingForm: FC<BookingFormProps> = ({
@@ -15,8 +16,14 @@ const BookingForm: FC<BookingFormProps> = ({
   formData,
   handleSubmit,
   handleOnChange,
+  dispatch,
 }) => {
   const { date, time, guests, occasion } = formData;
+
+  useEffect(() => {
+    dispatch({ data: formData.date, type: "UPDATE_TIMES" });
+  }, [formData.date]);
+
   return (
     <form
       className="grid gap-4 border rounded-lg shadow-lg m-auto w-2/5 p-4 text-center"

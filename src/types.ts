@@ -4,3 +4,8 @@ export type bookingFormValues = {
   guests: number;
   occasion: string;
 };
+
+export type timesAction = {
+  type: "UPDATE_TIMES";
+  data: string;
+};
