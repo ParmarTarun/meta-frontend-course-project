@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="lg:col-span-2 col-span-1 hero-content">
           <Chicago />
           <Link to={"/booking"}>
-            <button className="btn-primary lg:mt-10 mt-4">
+            <button className="btn-primary lg:mt-10 mt-4" aria-label="On Click">
               Reserve a table
             </button>
           </Link>

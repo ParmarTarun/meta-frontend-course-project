@@ -26,7 +26,7 @@ const BookingForm: FC<BookingFormProps> = ({
 
   return (
     <form
-      className="grid gap-4 border rounded-lg shadow-lg m-auto w-2/5 p-4 text-center"
+      className="grid gap-4 border rounded-lg shadow-lg m-auto lg:w-2/5 w-100 lg:p-4 p-1 text-center"
       onSubmit={handleSubmit}
     >
       <label htmlFor="res-date">Choose date</label>
@@ -55,6 +55,7 @@ const BookingForm: FC<BookingFormProps> = ({
         name="guests"
         value={guests}
         onChange={handleOnChange}
+        required
       />
       <label htmlFor="occasion">Occasion</label>
       <select
@@ -67,7 +68,7 @@ const BookingForm: FC<BookingFormProps> = ({
         <option value="Anniversary">Anniversary</option>
       </select>
       <div className="text-center my-2">
-        <button type="submit" className="btn-primary">
+        <button type="submit" className="btn-primary" aria-label="On Click">
           Make a reservation
         </button>
       </div>

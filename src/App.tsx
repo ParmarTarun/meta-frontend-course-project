@@ -22,7 +22,7 @@ const App = () => {
         </Routes>
         <Footer />
         <Section>
-          <div className="flex justify-between items-center bg-light px-">
+          <div className="flex justify-between items-center bg-light">
             <figure>
               <img src="/images/logo.svg" alt="logo" />
             </figure>
